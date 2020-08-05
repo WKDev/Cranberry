@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <script src="https://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
-<script src="./src/roslibjs/build/roslib.js"></script>
+<script src="./roslibjs/build/roslib.js"></script>
 
 <script>
   // Connecting to ROS
@@ -45,17 +45,17 @@
   // and message type. Note that we can call publish or subscribe on the same topic object.
   var ac_data_subscriber = new ROSLIB.Topic({
     ros : ros,
-    name : 'cranberry_topic/ac_data_publisher',
+    name : '/ac_msg',
     messageType : 'cranberry_topic/AcData'
   });
 
   // Then we add a callback to be called every time a message is published on this topic.
 
   ac_data_subscriber.subscribe(function(message) {
-    console.log('Received message on ' + message.temp + ': ' + JSON.stringify(message.humid));
+    console.log("data from :" + ac_data_subscriber.name + " | temp : " + message.temp + "humid : "+ message.humid);
 
     // If desired, we can unsubscribe from the topic as well.
-    // listener.unsubscribe();
+    // ac_data_subscriber.unsubscribe();
   });
 
   // Calling a service
