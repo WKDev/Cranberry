@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- reformat : shift alt f -->
+<!-- div.card_item -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cranberry</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../src/roslibjs/build/roslib.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <!-- <img src="logo.svg" alt="logo" class="logo"> -->
+        <div class="app_title">Cranberry</div>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="cards_wrap">
+            <!-- Light Card -->
+            <lt class="light_card">
+                <div class="card_inner">
+                    <div class="card_top">
+                        <div class="card_title">Light</div>
+                    </div>
+                    <div class="card_content">
+                        <div class="light_box">
+                            <div class="lamp_living_room"></div>
+                            <div class="label">Living room</div>
+                        </div>
+                        <div class="light_box">
+                            <div class="lamp_kitchen"></div>
+                            <div class="label">Kitchen</div>
+                        </div>
+                        <div class="light_box">
+                            <div class="lamp_private_room"></div>
+                            <div class="label">Private room</div>
+                        </div>
+                        <div class="light_box">
+                            <div class="bathroom"></div>
+                            <div class="lamp_bathroom"></div>
+                            <div class="label">Bathroom</div>
+                        </div>
+                    </div>
+                </div>
+            </lt>
+            <!-- Light Card -->
+            <tmhu class="temp_card">
+                <!-- div.card_item -->
+                <div class="card_inner">
+                    <p class="card_title">Temperatue</p>
+                    <div class="card_content">
+                        <div class="temp_humid_box">
+                            <hvac class="temp">NN°C
+                        </div>
+                        <div class="temp_humid_box">
+                            <hvac class="humid">NN%
+                        </div>
+                    </div>
+                </div>
+            </tmhu>
+
+            <wrkg class="device_card">
+                <!-- div.card_item -->
+                <div class="card_inner">
+                    <p class="card_title">Working Devices</p>
+                    <div class="card_content">
+                        <mode class="stay">Airconditioner</mode>
+                        <mode class="absent">Boiler</mode>
+                        <mode class="sleep">Dehumidifier</mode>
+                    </div>
+
+                </div>
+            </wrkg>
+
+            <etc class="mode_card">
+                <!-- div.card_item -->
+                <div class="card_inner">
+                    <p class="card_title">Mode Selection</p>
+                    <div class="card_content">
+                        <mode class="stay">STAY</mode>
+                        <mode class="absent">ABSENT</mode>
+                        <mode class="sleep">SLEEP</mode>
+                    </div>
+
+                </div>
+            </etc>
+
+            <ctrl class="ctrl_temp_card">
+                <!-- div.card_item -->
+                <div class="card_inner">
+                    <p class="card_title">Temperature Control</p>
+                    <div class="card_content">
+                        <p class="description">Target Temperature</p>
+                        <mode class="target_temp">25C</mode>
+                        <p class="chkbox">which device to use:only boiler, only airconditioner, both</p>
+                        <p class="radiobutton">Priority:Boiler, airconditioner</p>
+                    </div>
+                </div>
+            </ctrl>
+            <ctrl class="ctrl_humid_card">
+                <!-- div.card_item -->
+                <div class="card_inner">
+                    <p class="card_title">Humidity Control</p>
+                    <div class="card_content">
+                        <p class="description">Target Humidity</p>
+                        <mode class="target_humid">60%</mode>
+                    </div>
+                </div>
+            </ctrl>
+
+            <ctrl class="console_card">
+                <!-- div.card_item -->
+                <div class="card_inner">
+                    <p class="card_title">ROS Console</p>
+                    <div class="card_content">
+                        <p class="description">Target Humidity</p>
+                    </div>
+                </div>
+            </ctrl>
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

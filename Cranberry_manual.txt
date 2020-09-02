@@ -1,0 +1,19 @@
+In order to execute cranberry_system, you need to run command described below
+
+# Webserver Activation
+
+-ROS
+roscore
+
+- Django 
+cd ~/webserver && source env/bin/activate && python manage.py runserver
+
+- rosbridge_server(bridging data from django framework)
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+- ac_data_publisher
+rosrun cranberry_topic ac_data_publisher
+
+- rosserial (communicates with NodeMCU)
+rosrun rosserial_python serial_node.py tcp
+

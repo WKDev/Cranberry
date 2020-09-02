@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+li, a, button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fdfdfd;
+  text-decoration: none;
+}
+
+header{
+  background-color: rgb(146, 170, 169);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav__links{
+  list-style: none;
+}
+.nav__links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+  color: #0088a9;
+}
+
+button{
+  padding: 9px 25px;
+  background-color: #3CAEA3;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+body{
+  background: rgb(247, 247, 247);
+  /* color: #555555; */
+  font-size: 14;
+}
+
+.wrapper{
+  margin: 0 auto;
+  padding: 40px;
+  width : 100%;
+}
+
+.cards_wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+lt, tmhu, etc, wrkg, ctrl{
+  width: 33.3%;
+  padding: 5px;
+  height: auto;
+}
+
+.card_inner{
+  margin: 5px;
+  background: #ffffff;  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(135deg, #fffcdc, #d9a7c7);  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(135deg, #fffcdc, #d9a7c7); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.301); 
+  border-radius: 10px; /* 5px rounded corners */
+}
+
+.card_top{
+  width: 100px;
+  margin: 0 auto;
+  height: 20px;  
+  padding: 5px;
+}
+
+.card_title{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card_content{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100px;
+  max-height: 180px;
+  height: fit-content;
+  overflow: hidden;
+  /* overflow : 카드 크기가 자꾸 그림 영역을 벗어남 방지 */
+}
+
+/* 카드 내부 box 구성 */
+.light_box{
+  float: left;
+  width: 25%;
+  height: fit-content;
+  padding: 20px 10px 10px 0px;
+  margin: 0 auto;
+}
+
+@media(max-width: 470px){
+  .light_box{
+    width: 50%;
+  }
+}
+
+.temp_humid_box{
+  float: left;
+  width: 50%;
+  height: max-content;
+  padding: 2px;
+  margin: auto;
+}
+
+hvac{
+  display: table; margin-left: auto; margin-right: auto;
+  text-align: center;
+  font-size: 25px;
+}
+
+.lamp_living_room{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(80, 80, 80);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.lamp_kitchen{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(80, 80, 80);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.lamp_private_room{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(80, 80, 80);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.lamp_bathroom{
+  width: 20px;
+  height: 20px;
+  background-color: rgb(80, 80, 80);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.label{
+  padding-top: 15px;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* .mode_box{
+  float: left;
+  width: 33.3%;
+  height: 55px;
+  margin: 0 auto;
+  padding-top: 15px;
+} */
+
+mode{
+  display: inline-block;
+  width: fit-content;
+  height: fit-content;
+  padding:5px;
+  margin: 5px auto;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.274);
+  border-radius: 10%;
+}
+
+@media(max-width: 768px){
+  lt, tmhu, etc, wrkg,ctrl{
+    width: 100%;
+  }
+
+  .card_content{
+    min-height: 50px;
+  }
+
+}
+

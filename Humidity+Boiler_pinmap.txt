@@ -1,0 +1,36 @@
+VIN - Raw power from 5V Adapter, Power to Relay module
+GND - Ground
+
+3V3 - 3V to DHT22
+GND - Ground
+
+D0 Digital Output to Relay
+D2 Digital Input from DHT22
+
+
+Temperature Sensor
+Sensor Type: DHT22
+Driver Ver:  1
+Unique ID:   -1
+Max Value:   125.00°C
+Min Value:   -40.00°C
+Resolution:  0.10°C
+------------------------------------
+Humidity Sensor
+Sensor Type: DHT22
+Driver Ver:  1
+Unique ID:   -1
+Max Value:   100.00%
+Min Value:   0.00%
+Resolution:  0.10%
+------------------------------------
+MIN_DELAY:  2000ms
+
+
+first thing first before communicate multiple device when connected with iptime GuestNetwork,
+make sure change Comm_setting in AP_configuration
+
+--------------------
+fetching custom messages from ros package -->rosrun rosserial_client make_library.py (~//libraries) (package_name)
+if above command dosen't work, try : rosrun rosserial_client make_libraries .
+

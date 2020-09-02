@@ -3,11 +3,20 @@
 // 메시지 콜백 함수로써, 밑에서 설정한 ros_tutorial_msg라는 이름의 토픽
 // 메시지를 수신하였을 때 동작하는 함수이다
 // 입력 메시지로는 ros_tutorials_topic 패키지의 MsgTutorial 메시지를 받도록 되어있다
+
+float customRound(float num){
+float res;
+res = floor(num*100)/100 ;
+return res;
+}
+
 void msgCallback(const cranberry_topic::AcData::ConstPtr& msg)
 {
-ROS_INFO("recieve temp = %f", msg->temp); // stamp.sec 메시지를 표시한다
-ROS_INFO("recieve humid = %f", msg->humid); // stamp.nsec 메시지를 표시한다
+float rec_temp = msg->temp;
+float rec_humid = msg->humid;
 
+ROS_INFO("temp = %f", customRound(rec_temp));
+ROS_INFO("humid = %f", customRound(rec_humid));
 }
 int main(int argc, char **argv) // 노드 메인 함수
 {
