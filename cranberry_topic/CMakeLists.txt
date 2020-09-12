@@ -5,6 +5,8 @@ project(cranberry_topic)
 find_package(catkin REQUIRED COMPONENTS message_generation std_msgs roscpp)
 ## 메시지 선언: MsgTutorial.msg
 add_message_files(FILES AcData.msg)
+
+add_service_files(FILES CommBoiler.srv)
 ## 의존하는 메시지를 설정하는 옵션이다.
 ## std_msgs가 설치되어 있지 않다면 빌드 도중에 에러가 난다.
 generate_messages(DEPENDENCIES std_msgs)
@@ -18,10 +20,16 @@ CATKIN_DEPENDS std_msgs roscpp
 include_directories(${catkin_INCLUDE_DIRS})
 ## topic_publisher 노드에 대한 빌드 옵션이다.
 ## 실행 파일, 타깃 링크 라이브러리, 추가 의존성 등을 설정한다.
+add_executable(ac_boiler_server src/ac_boiler_server.cpp)
+add_dependencies(ac_boiler_server ${${PROJECT_NAME}_EXPORTED_TARGETS}
+${catkin_EXPORTED_TARGETS})
+target_link_libraries(ac_boiler_server ${catkin_LIBRARIES})
+
 add_executable(ac_data_publisher src/ac_data_publisher.cpp)
 add_dependencies(ac_data_publisher ${${PROJECT_NAME}_EXPORTED_TARGETS}
 ${catkin_EXPORTED_TARGETS})
 target_link_libraries(ac_data_publisher ${catkin_LIBRARIES})
+
 ## topic_subscriber 노드에 대한 빌드 옵션이다.
 add_executable(ac_data_subscriber src/ac_data_subscriber.cpp)
 add_dependencies(ac_data_subscriber ${${PROJECT_NAME}_EXPORTED_TARGETS}

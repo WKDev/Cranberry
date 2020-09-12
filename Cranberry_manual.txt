@@ -6,14 +6,26 @@ In order to execute cranberry_system, you need to run command described below
 roscore
 
 - Django 
-cd ~/webserver && source env/bin/activate && python manage.py runserver
+cd ~/catkin_ws/src/Cranberry/webserver && source env/bin/activate && python manage.py runserver
 
 - rosbridge_server(bridging data from django framework)
+
+# sudo apt-get install ros-melodic-rosbridge-server
+
 roslaunch rosbridge_server rosbridge_websocket.launch
+rosbridge
 
 - ac_data_publisher
 rosrun cranberry_topic ac_data_publisher
 
 - rosserial (communicates with NodeMCU)
 rosrun rosserial_python serial_node.py tcp
+
+How to turn on boiler 
+rosservice call /comm_boiler 1
+rosservice call /comm_boiler 0
+
+* Service handler error occurs but Request is successfully commited.
+
+
 

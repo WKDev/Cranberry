@@ -31,6 +31,6 @@ first thing first before communicate multiple device when connected with iptime 
 make sure change Comm_setting in AP_configuration
 
 --------------------
-fetching custom messages from ros package -->rosrun rosserial_client make_library.py (~//libraries) (package_name)
+fetching custom messages from ros package -->rosrun rosserial_client make_library.py (cranberry_topic) (~//libraries) (package_name)
 if above command dosen't work, try : rosrun rosserial_client make_libraries .
 
