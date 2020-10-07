@@ -4,8 +4,15 @@ GND - Ground
 3V3 - 3V to DHT22
 GND - Ground
 
-D0 Digital Output to Relay
+D7 Digital Output to Relay 1 
+D8 Digital Output to Relay 2 
 D2 Digital Input from DHT22
+
+
+온도센서 -D2 Topic_publisher   Rosserial(publish)   /ac_msg  WebSocket(Subscribe)
+릴레이 – D7                   Rosserial(Server)  /comm_relay  WebSocket(Client)
+모션센서 – D6                 Rosserial(client)   /alarm  WebSocket(Server)
+IR – D5			      Rosserial(client)   /ir_**  WebSocket(Server)
 
 
 Temperature Sensor
@@ -29,6 +36,9 @@ MIN_DELAY:  2000ms
 
 first thing first before communicate multiple device when connected with iptime GuestNetwork,
 make sure change Comm_setting in AP_configuration
+
+iptime 게스트 네트워크를 통해 IoT 장치를 연결시키고, 이들을 내무 망 간에 소통시키고 싶다면, 
+게스트 네트워크 세팅하면서 내부 망끼리 통신할 수 있도록 해야 합니다. (기본은 비활성화 되어 있음)
 
 --------------------
 fetching custom messages from ros package -->rosrun rosserial_client make_library.py (cranberry_topic) (~//libraries) (package_name)

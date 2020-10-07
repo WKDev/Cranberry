@@ -1,0 +1,66 @@
+(ExpressProject "CRANBERRY_BOARD"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "17.4-2019 S007 (3866169) [5/30/2020]-[10/05/20]")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\cranberry_board.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x"))
+  (Folder "Layout")
+  (Folder "Outputs")
+  (Folder "Referenced Projects")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles")
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (Folder "Logs")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    (NODEMCU
+      (FullPartName "NODEMCU.Normal")
+      (LibraryName "C:\USERS\CHANH\DOCUMENTS\CRANBERRY\ORCAD\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (AM2302
+      (FullPartName "AM2302.Normal")
+      (LibraryName "C:\USERS\CHANH\DOCUMENTS\CRANBERRY\ORCAD\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("CONN SOCKET 15"
+      (FullPartName "CONN SOCKET 15.Normal")
+      (LibraryName "C:\CADENCE\SPB_17.4\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "chanh")
+  (LastUsedLibraryBrowseDirectory "C:\Users\chanh\Documents\Cranberry\orcad")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\chanh\Documents\Cranberry\orcad\cranberry_board.dsn")
+      (Path "Design Resources"
+         "C:\Users\chanh\Documents\Cranberry\orcad\cranberry_board.dsn"
+         "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library"
+         "C:\Users\chanh\Documents\Cranberry\orcad\library1.olb")
+      (Select "Design Resources" "Library"
+         "C:\Users\chanh\Documents\Cranberry\orcad\library1.olb" "NODEMCU"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 201 0 526"))
+      (Tab 0))))
