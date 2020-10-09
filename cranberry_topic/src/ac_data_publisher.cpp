@@ -9,7 +9,7 @@ ros::NodeHandle nh;
 // 퍼블리셔 선언, ros_tutorials_topic 패키지의 MsgTutorial 메시지 파일을 이용한
 // 퍼블리셔 ros_tutorial_pub 를 작성한다. 토픽명은 "ros_tutorial_msg" 이며,
 // 퍼블리셔 큐(queue) 사이즈를 100개로 설정한다는 것이다
-ros::Publisher ac_temp_pub = nh.advertise<cranberry_topic::AcData>("ac_msg", 100);
+ros::Publisher ac_temp_pub = nh.advertise<cranberry_topic::AcData>("ac_msg", 0.1);
 // 루프 주기를 설정한다. "10" 이라는 것은 10Hz를 말하는 것으로 0.1초 간격으로 반복된다
 ros::Rate loop_rate(2);
 // MsgTutorial 메시지 파일 형식으로 msg 라는 메시지를 선언
