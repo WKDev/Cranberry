@@ -1,0 +1,8 @@
+A!FUNC_LOGICAL_PATH!COMP_DEVICE_TYPE!REFDES!FUNC_PRIM_FILE!COMP_PARENT_PPT!COMP_PARENT_PPT_PART!COMP_PARENT_PART_TYPE!FUNC_SCH_SIZE!FUNC_HAS_FIXED_SIZE!FUNC_DES!FUNC_GROUP!FUNC_ROOM!FUNC_CDS_FSP_UID!FUNC_NO_SWAP_PIN!FUNC_HARD_LOCATION!FUNC_NO_SWAP_GATE_EXT!FUNC_CDS_FSP_MAPPED_CELL!FUNC_CDS_FSP_FPGA_SYMBOL!FUNC_CDS_FSP_TERM_TYPE!FUNC_CDS_FSP_TERM_NAME!FUNC_ROOM!FUNC_GROUP!FUNC_CDS_FSP_TERM_INDEX!FUNC_CDS_FSP_INSTANCE_ID!FUNC_NO_SWAP_GATE!FUNC_NO_XNET_CONNECTION!FUNC_CDS_FSP_IS_FPGA!
+J!C:/Users/chanh/Documents/Cranberry/orcad/allegro/201021 cranberry_fin.brd!Fri Oct 23 23:47:24 2020!-80.0000!-80.0000!453.4000!351.8000!0.0001!millimeters!CRANBERRY!10.400000 mil!2!UP TO DATE!
+S!@cranberry.schematic1(sch_1):ins82@custom_parts.\nodemcu.normal\(chips)!NODEMCU_ESP12_NODEMCU!U1!.\chipsView.dat!!!!!!F5!!!!!!!!!!!!!!!!!!
+S!@cranberry.schematic1(sch_1):ins167@custom_parts.\am2302.normal\(chips)!AM2302_DHT22_AM2302!U2!.\chipsView.dat!!!!!!F4!!!!!!!!!!!!!!!!!!
+S!@cranberry.schematic1(sch_1):ins198@custom_parts.\common_part.normal\(chips)!COMMON_PART_REL01_KY-022!U3!.\chipsView.dat!!!!!!F3!!!!!!!!!!!!!!!!!!
+S!@cranberry.schematic1(sch_1):ins216@custom_parts.\common_part.normal\(chips)!COMMON_PART_REL01_RELAY!U4!.\chipsView.dat!!!!!!F2!!!!!!!!!!!!!!!!!!
+S!@cranberry.schematic1(sch_1):ins234@custom_parts.\common_part.normal\(chips)!COMMON_PART_REL01_RELAY!U5!.\chipsView.dat!!!!!!F1!!!!!!!!!!!!!!!!!!
+S!@cranberry.schematic1(sch_1):ins252@custom_parts.\common_part.normal\(chips)!COMMON_PART_REL01_MOTION_SENSOR!U6!.\chipsView.dat!!!!!!F0!!!!!!!!!!!!!!!!!!

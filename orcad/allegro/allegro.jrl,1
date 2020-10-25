@@ -1,0 +1,12 @@
+\t (00:00:01) allegro 17.4 S007 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Sat Oct 24 00:25:48 2020
+\t (00:00:01)         Host=GRAM15 User=chanh Pid=13628 CPUs=8
+\t (00:00:01) CmdLine= C:\Cadence\SPB_17.4\tools\bin\allegro.exe
+\t (00:00:01) 
+   (00:00:01) Loading axlcore.cxt 
+\e (00:00:10) Retrieval of 'OrCAD_PCB_Designer' license failed: 'ERROR (LMF-13010): License call failed for feature orcad_pcb_productivity. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-10, 234, 0): Feature has expired.
+
+Run 'lic_error LMF-13010' for more information.'. Report the licenses in use log via the menu item File->Viewlog: license_use.log
+\i (00:00:19) fillin confirm
+\t (00:00:19)     Journal end - Sat Oct 24 00:26:07 2020

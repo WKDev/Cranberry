@@ -1,0 +1,8 @@
+\t (00:00:01) padstack_editor 17.4 S007 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Mon Oct 12 18:25:17 2020
+\t (00:00:01)         Host=GRAM15 User=chanh Pid=6132 CPUs=8
+\t (00:00:01) CmdLine= padstack_editor -mpssession chanh -file C:/Users/chanh/AppData/Local/Temp/#Taaaaba15532.tmp -pname PAD125 -data C:/Users/chanh/AppData/Local/Temp/#Taaaabd15532.tmp
+\t (00:00:01) 
+\d (00:00:12) QtSignal GuidedTabsParent GuidedTabs currentChanged Start
+\d (00:00:13) QtSignal GuidedTabsParent GuidedTabs currentChanged Drill
+\t (00:00:23)     Journal end - Mon Oct 12 18:25:39 2020
