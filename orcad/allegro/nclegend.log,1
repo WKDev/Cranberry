@@ -4,16 +4,13 @@
 (                                                                     )
 (    Drawing          : 201021 cranberry_fin.brd                      )
 (    Software Version : 17.4S007                                      )
-(    Date/Time        : Fri Oct 23 23:15:59 2020                      )
+(    Date/Time        : Sun Oct 25 19:10:26 2020                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
-Begin processing of drill legend template file 'C:/Cadence/SPB_17.4/share/pcb/text/nclegend/default-mm.dlt' ...
+Begin processing of drill legend template file 'd:/program files/cadence/spb_17.4/share/pcb/text/nclegend/default-mm.dlt' ...
 WARNING(SPMHSK-47): Column type 'HoleSize' does not exist.
 WARNING(SPMHSK-47): Column type 'PlateStatus' does not exist.
 End of drill legend template file processing.
-
-Begin processing drill holes.
-No errors detected in processing holes.
-End processing drill holes.
+Drill Legend command cancelled.
