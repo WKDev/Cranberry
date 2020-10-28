@@ -1,14 +1,16 @@
 (---------------------------------------------------------------------)
 (                                                                     )
-(    NCDrill Customization Warnings/Errors                            )
+(    DRILL LEGEND                                                     )
 (                                                                     )
 (    Drawing          : 201021 cranberry_fin.brd                      )
 (    Software Version : 17.4S007                                      )
-(    Date/Time        : Sun Oct 25 19:10:33 2020                      )
+(    Date/Time        : Sun Oct 25 19:10:49 2020                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
-
-
-No warnings or errors detected.
+Begin processing of drill legend template file 'd:/program files/cadence/spb_17.4/share/pcb/text/nclegend/default-mm.dlt' ...
+WARNING(SPMHSK-47): Column type 'HoleSize' does not exist.
+WARNING(SPMHSK-47): Column type 'PlateStatus' does not exist.
+End of drill legend template file processing.
+Drill Legend command cancelled.
