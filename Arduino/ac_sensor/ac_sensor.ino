@@ -28,6 +28,11 @@ float humid;
 
 unsigned int long startTime=0;
 long int relayState = 0;
+unsigned int long elaspedSec=0;
+
+unsigned int long protectTimeCode = 0;
+int protector = 0;
+bool initProtect = true;
 
 ////////////WIFI/////////////////
 const char* ssid     = "IoT_System";
@@ -45,21 +50,31 @@ void callback(const cranberry_topic::CommBoiler::Request &req, cranberry_topic::
     Serial.println("req is 0");
     relayState = (long int)req.Request;
     digitalWrite(RELAY_PIN, LOW);
-    res.Response = relayState;}
+    res.Response = (int)relayState;}
 
   if(req.Request == 1){
     startTime = millis();
     Serial.println("req is 1");
     relayState = (long int)req.Request;
     digitalWrite(RELAY_PIN, HIGH);
+    res.Response = (int)relayState;}
+  
+  
+  
+  if(req.Request > 1){
+    startTime = millis();
+    Serial.println("req is more than 1");
+    relayState = (long int)req.Request;
+    digitalWrite(RELAY_PIN, HIGH);
     res.Response = relayState;}
   
-  if(req.Request == 101) res.Response = relayState;
-  
+
   Serial.print("Req:");
   Serial.print(req.Request);
   Serial.print("Res:");
   Serial.println(relayState);
+
+  
 }
 
 cranberry_topic::AcData ac_sensor_msg;
@@ -68,6 +83,10 @@ ros::ServiceServer<cranberry_topic::CommBoiler::Request, cranberry_topic::CommBo
 
 void setup()
 {
+  pinMode(2, OUTPUT);
+  pinMode(16, OUTPUT);
+  digitalWrite(2, HIGH);
+  digitalWrite(16, HIGH);
   pinMode(RELAY_PIN, OUTPUT);
   ///////////DHT Section START///////////////
   dht.begin();
@@ -78,9 +97,8 @@ void setup()
   //  dht.humidity().getSensor(&sensor);
   ///////////DHT Section END///////////////
 
-
   // Use ESP8266 serial to monitor the process
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println();
   Serial.print("Connecting to ");
   Serial.println(ssid);
@@ -111,21 +129,44 @@ void setup()
 
 void loop()
 {
-  if(relayState ==1){
-    Serial.println((millis() - startTime));
-    if((millis() - startTime)/1000 > 3600){
+//  digitalWrite(D0, HIGH);
+//  digitalWrite(D3, HIGH);
+//
+//  digitalWrite(LED_BUILTIN, HIGH);
+
+  // A section counts time and turn off 
+  
+  elaspedSec = (millis() - startTime)/1000;
+
+  if((relayState >=1)&& protector == 0){
+//      if(blinkParameter == 0){
+//        digitalWrite(D2, HIGH);
+//        blinkParameter = 1;
+//      }
+//      else{
+//        digitalWrite(D2, LOW);
+//        blinkParameter = 0;
+//      }
+      
+    //Serial.println((millis() - startTime));
+    if(elaspedSec > 3600*relayState){
       Serial.println("time over. stop control");
       relayState = 0;
       digitalWrite(RELAY_PIN, LOW);
-    }
+      Serial.println("relayState = " + relayState);
+    }	
     else{
-      Serial.print(60-(millis() - startTime)/60000); //subtraction has to reach 3600 *1000 
-      Serial.println("m left");
+      Serial.print("Boiler Working... | ");
+      Serial.print(elaspedSec); //subtraction has to reach 3600 *1000
+      //(millis() - startTime)/60000 means elasped time since the command delivered(scale : min)
+      Serial.print("/");
+      Serial.print(3600*relayState);
+      Serial.println("sec has done.");
     }
     
   }
   
-  ///////////DHT Section START///////////////
+  /////////////////// DHT Section START ////////////////
   delay(2000); //DHT MINIMUM_DELAY
   sensors_event_t event; //get TEMP Event
   dht.temperature().getEvent(&event);
@@ -146,7 +187,7 @@ void loop()
   ///////////DHT Section END///////////////
 
   if (nh.connected()) {
-    Serial.print("Connected : sending :"); Serial.println(temp);
+//    Serial.print("Connected : sending :"); Serial.println(temp);
     // Say hello
     ac_sensor_msg.temp = temp; // remove numbers below decimal point 2
     ac_sensor_msg.humid = humid;
@@ -157,7 +198,43 @@ void loop()
   nh.spinOnce();
   // Loop exproximativly at 1Hz
 
-  if(temp > 33.0){
-    digitalWrite(RELAY_PIN, LOW);
-  }
+  if(temp > 30.0){
+    protector = 1;
+    Serial.println("too high temp. protects overheat. timecode : " + protectTimeCode);
+    delay(500);
+    
+    if(initProtect){ // to stop too much repeatition of relay);
+      protectTimeCode = millis();
+      digitalWrite(RELAY_PIN, LOW);
+      delay(500);
+      digitalWrite(RELAY_PIN, HIGH);
+      delay(500);
+      digitalWrite(RELAY_PIN, LOW);
+      delay(500);
+      digitalWrite(RELAY_PIN, HIGH);
+      delay(500);
+      digitalWrite(RELAY_PIN, LOW);
+      delay(500);
+      digitalWrite(RELAY_PIN, HIGH);
+      delay(500);
+      digitalWrite(RELAY_PIN, LOW);
+      delay(500);   
+      initProtect = false; 
+      }
+    else{
+          digitalWrite(RELAY_PIN, LOW);
+          Serial.println("High Temp Protecting...");
+      }
+      Serial.print((millis() - protectTimeCode)/1000);
+      Serial.println("sec since protection starts");
+    }
+  else if(((millis() - protectTimeCode)/1000 > 10) && (temp < 30.0) && (protectTimeCode != 0)){
+      Serial.println("protection finished. follows previous command.");
+      protectTimeCode = 0;
+      initProtect = true;
+      protector = 0;
+      if(relayState >=1){
+        digitalWrite(RELAY_PIN, HIGH);
+      }
+    }
 }
