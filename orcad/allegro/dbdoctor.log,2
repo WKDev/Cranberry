@@ -1,0 +1,17 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    DBDOCTOR                                                         )
+(                                                                     )
+(    Drawing          : 201021 cranberry_fin.brd                      )
+(    Software Version : 17.4S007                                      )
+(    Date/Time        : Thu Oct 22 23:12:02 2020                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ERROR: in SYMBOL DEFINITION name = LINEAR_DIMENSION
+  ERROR(SPMHDB-224): Symbol definition has no instances.
+WARNING Deleted redundant via at (37.4650 35.5600) on net N00950.
+
+1 warnings, 1 errors detected, 1 errors could be fixed.

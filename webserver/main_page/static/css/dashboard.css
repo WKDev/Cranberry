@@ -109,10 +109,9 @@ lt, tmhu, etc, wrkg, ctrl{
 
 /* 카드 내부 box 구성 */
 .light_box{
-  float: left;
+  display:grid;
   width: 25%;
-  height: fit-content;
-  padding: 20px 10px 10px 0px;
+  padding: 30px 10px 10px 0px;
   margin: 0 auto;
 }
 
@@ -136,40 +135,23 @@ hvac{
   font-size: 25px;
 }
 
-.lamp_living_room{
-  width: 20px;
-  height: 20px;
+lamp{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display : inline-block;
+  width: 30px;
+  height: 30px;
   background-color: rgb(80, 80, 80);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   margin: 0 auto;
+  transition: all 0.3s cubic-bezier(1,0,0,1) 0s ;
+  font-size: 0px;
 }
-
-.lamp_kitchen{
-  width: 20px;
-  height: 20px;
-  background-color: rgb(80, 80, 80);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.lamp_private_room{
-  width: 20px;
-  height: 20px;
-  background-color: rgb(80, 80, 80);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.lamp_bathroom{
-  width: 20px;
-  height: 20px;
-  background-color: rgb(80, 80, 80);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  margin: 0 auto;
+lamp:hover{ 
+  font-size: 0px;
+  background-color: rgb(255, 230, 0);
+  box-shadow: 0 0 10px 5px rgba(172, 126, 0, 0.781);
 }
 
 .label{
@@ -198,10 +180,11 @@ mode{
   border-radius: 10%;
 }
 
-@media(max-width: 768px){
+@media (orientation:portrait){
   lt, tmhu, etc, wrkg,ctrl{
     width: 100%;
   }
+
 
   .card_content{
     min-height: 50px;
