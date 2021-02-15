@@ -1,8 +1,0 @@
-2020-10-12T17:40:20 ===> "c:/users/chanh/documents/cranberry/orcad/allegro/pstchip.dat"
-2020-10-12T17:40:20 ===> "c:/users/chanh/documents/cranberry/orcad/allegro/pstxnet.dat"
-2020-10-12T17:40:20 ===> "c:/users/chanh/documents/cranberry/orcad/allegro/pstxprt.dat"
-2020-10-12T17:40:20 ===> "c:/users/chanh/documents/cranberry/orcad/allegro/pstdmlmodels.dat"
-2020-10-12T17:40:47 ===> "./pstchip.dat"
-2020-10-12T17:40:47 ===> "./pstxnet.dat"
-2020-10-12T17:40:47 ===> "./pstxprt.dat"
-2020-10-12T17:40:47 ===> "./pstdmlmodels.dat"

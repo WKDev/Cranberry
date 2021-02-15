@@ -1,2 +1,0 @@
-float32 temp
-float32 humid
