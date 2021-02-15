@@ -1,0 +1,13 @@
+\t (00:01:06) allegro 17.4 S007 Windows SPB 64-bit Edition
+\t (00:01:06)     Journal start - Fri Oct 23 23:10:35 2020
+\t (00:01:06)         Host=GRAM15 User=chanh Pid=17440 CPUs=8
+\t (00:01:06) CmdLine= C:\Cadence\SPB_17.4\tools\bin\allegro.exe
+\t (00:01:06) 
+\d (00:01:06) Design opened: C:/Users/chanh/Documents/Cranberry/backup/allegro/cranberry_board.brd
+\i (00:01:06) generaledit 
+\i (00:01:08) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged "Start Page"
+\i (00:01:11) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged cranberry_board
+\i (00:01:11) opencd 'C:/Users/chanh/Documents/Cranberry/orcad/allegro/201021 cranberry_fin.brd' 
+\t (00:01:11) Opening existing design...
+\i (00:01:11) trapsize 3036
+\t (00:01:11)     Journal end - Fri Oct 23 23:10:40 2020

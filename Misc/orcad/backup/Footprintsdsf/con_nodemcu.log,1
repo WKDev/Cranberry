@@ -1,0 +1,23 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    CREATE SYMBOL                                                    )
+(                                                                     )
+(    Drawing          : CON_NODEMCU.dra                               )
+(    Software Version : 17.4S007                                      )
+(    Date/Time        : Sun Oct 11 12:56:33 2020                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Create Symbol of type: PACKAGE
+    Directory = C:/Users/chanh/Documents/Cranberry/orcad/Footprints
+    Name      = con_nodemcu.psm
+    User      = chanh
+    Machine   = GRAM15
+
+
+Create symbol started.
+ 
+
+Create symbol completed.
+
