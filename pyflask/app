@@ -1,0 +1,68 @@
+from flask import Flask, render_template, request, jsonify, url_for, session, flash
+# render_template : html 화면에 뿌려줌
+# request : post 요청 관련 처리
+# flash : client에 alert 송신
+import time, os
+import os
+
+from werkzeug.utils import redirect
+
+base_dir = os.path.dirname(__file__)
+print(base_dir)
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
+from .lib.SMSender import send, code_generator
+
+# Firebase Region
+cred = credentials.Certificate("apiKey.json")
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://cranberry-f84d9-default-rtdb.firebaseio.com/'
+})
+dir = db.reference('Users')
+ref = db.reference('Approved_Users')
+
+t = time.localtime()
+auth_code = code_generator()
+
+@app.route('/')
+def index():
+    # 로그인 된 경우
+    if 'user_phone' in session:
+        user_phone = session['user_phone']
+        return render_template('offcanvas.html', user_phone=user_phone)
+    # 로그아웃 상태인 경우
+    else:
+        return redirect((url_for('login')))
+
+
+
+@app.route('/auth', methods=['POST'])
+def auth():
+    auth_code_json = request.get_json()
+    print(auth_code_json)
+    print("auth_code saved in server is : " + str(auth_code))
+    if auth_code_json['auth_code'] == str(auth_code):
+        print("Server_side Authentification Done.")
+
+        data = request.get_json()
+        print(data)
+        session['phone_number'] = data['phone_number']
+        print('successfully added session : ')
+
+        return render_template('offcanvas.html', user_phone=data['phone_number'])
+
+    else:
+        print("auth code mismatched.")
+        return jsonify(result="success", result2={'code': 'auth code mismatch'})
+
+
+
+@app.route('/logout')
+def session_log_out():
+    session.pop('user_phone', None)
+    return redirect(url_for('login'))
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000)  # 자동으로 수정된 코드 리로드해줌
