@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+    margin-top: 100px !important;
+    margin-bottom: 50px !important;
+    text-align: right;
+    
+}
+
+label{
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#send_auth{
+    width : 130px;
+    margin-left: 5px;
+}
+
+body{
+    background-color:aquamarine !important;
+}
+
+
+.card_custom{
+    border-radius: 10px;
+    background-color: white;  
+    margin : 0 auto;
+    margin-top: 10px;
+    padding: 15px;
+    width : 600px;
+    height: max-content !important;
+    position: static;
+    box-shadow: 10px 10px 20px rgba(100,100,100,.3);
+    padding-bottom: 70px; !important;
+}
+
+#info_group{
+    margin-top: 30px !important;
+}
+#auth_group{
+    margin-top: 30px !important;
+    display: none;
+}
+
+input:invalid{
+    background-color: red;
+}
+
+button{
+    margin-right: 0px !important;
+    margin-top: 15px !important;
+    float: right;
+}
+

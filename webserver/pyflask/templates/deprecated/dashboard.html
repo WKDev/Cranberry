@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+	    <div class="wrapper">
+        <!-- Light Card -->
+        <card class="light_card">
+            <div class="card_title">Light</div>
+            <div class="card_content">
+                <div class="light_box">
+                    <div id="light_01" class="lamp">0</div>
+                    <div id="label" class="label">living room</div>
+                </div>
+                <div class="light_box">
+                    <div id="light_02" class="lamp">0</div>
+                    <div id="label" class="label">kitchen</div>
+                </div>
+            </div>
+        </card>
+        <card class="temp_humid_card">
+            <div class="card_title">A/C</div>
+            <div class="card_content">
+                <div class="ac_box">
+                    <div id="temp" class="ac">°C</div>
+                    <div id="label" class="label">Temperature</div>
+                </div>
+                <div class="ac_box">
+                    <div id="humid" class="ac">%</div>
+                    <div id="label" class="label">humidity</div>
+                </div>
+                <input type="checkbox" id="switch1" name="switch1" class="input__on-off">
+            <label for="switch1" class="label__on-off"> 
+                <span class="marble"></span> 
+                <span class="on">on</span> 
+                <span class="off">off</span> 
+            </label>
+            </div>
+            
+        </card>
+            <card class="door_card">
+            <div class="card_title">Door</div>
+            <div class="card_content">
+            </div>
+            
+        </card>
+
+    </div>
+{% endblock %}
