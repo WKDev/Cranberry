@@ -17,9 +17,9 @@ app_users = db.reference('Approved_Users')
 
 
 if __name__ == "__main__":
-    app_users.update({'01047383672': {
-        'visit_purpose': 'tap'
-    }
+    app_users.push().set({
+        'phone_num':'01090418986',
+        'purpose':'elec'
     }) # update는 그냥 추가만 함
     specified_user = db.reference('Approved_Users').child('01011011010')
     print(app_users.get().keys())
